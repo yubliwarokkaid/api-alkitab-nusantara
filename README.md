@@ -1,40 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Dokumentasi API
 
-## Getting Started
+REST API Alkitab Nusantara adalah sebuah layanan yang dirancang untuk memberikan akses cepat dan mudah ke teks Alkitab dalam berbagai versi terjemahan. Dengan API ini, pengembang dapat mengintegrasikan teks Alkitab ke dalam aplikasi atau situs web mereka, sehingga memungkinkan pengguna untuk membaca, mencari, atau menampilkan ayat dan pasal tertentu sesuai kebutuhan. API ini menggunakan format data JSON, yang mempermudah pengolahan dan penyajian data Alkitab dalam aplikasi modern.
 
-First, run the development server:
+Sumber data REST API Alkitab Nusantara berasal dari [SABDA Labs](https://labs.sabda.org/API), sebuah platform penelitian digital yang menyediakan sumber daya Alkitab dan literatur Kristen untuk kebutuhan pengembang dan pengguna teknologi. Dengan API ini, Anda dapat mengakses teks Alkitab berdasarkan buku, pasal, ayat, dan versi terjemahan, termasuk Terjemahan Baru (TB), King James Version (KJV), dan lainnya.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 1. Endpoint List Alkitab
+
+### Base URL
+[https://api-alkitab-nusantara.vercel.app](https://api-alkitab-nusantara.vercel.app)
+
+### API Endpoints
+
+| METHOD | ENDPOINT                   | DESCRIPTION                                                                 |
+|--------|----------------------------|-----------------------------------------------------------------------------|
+| GET    | `/api/v1/book/list`         | Pada Endpoint ini mengambil semua isi Kitab dari (Kejadian - Wahyu).        |
+| GET    | `/api/v1/book/list/old`     | Pada Endpoint ini mengambil semua isi Kitab Perjanjian Lama dari (Kejadian - Maleakhi). |
+| GET    | `/api/v1/book/list/new`     | Pada Endpoint ini mengambil semua isi Kitab Perjanjian Baru dari (Matius - Wahyu). |
+
+
+#### Example Response
+```base
+[
+    {
+      "id": 1,
+      "short": "Kej",
+      "name": "Kejadian",
+      "chapter": 50
+    },
+    {
+      "id": 2,
+      "short": "Kel",
+      "name": "Keluaran",
+      "chapter": 40
+    }
+]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
+<br>
+<br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 2. Endpoint Isi Konten Alkitab
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Base URL
+[https://api-alkitab-nusantara.vercel.app](https://api-alkitab-nusantara.vercel.app)
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### API Endpoints
 
-## Learn More
+| METHOD | ENDPOINT                   | DESCRIPTION                                                                 |
+|--------|----------------------------|-----------------------------------------------------------------------------|
+| GET    | `/api/v1/passage/{short}/{chapter}`         | Pada Enpoint ini mengambil semua Nama Buku, Title Buku, isi Ayat dan Nomor Pasal. contoh:https://api-alkitab-nusantara.vercel.app/api/v1/passage/Kej/1        |
+| GET    | `/api/v1/passage/{short}/{chapter}?version={version}`     | Pada Enpoint ini mengambil semua Nama Buku, Title Buku, isi Ayat dan Nomor Pasal, dengan menambahkan versi Terjemahan Alkitab seperti TB, TL, AV, dan lainnya. contoh:https://api-alkitab-nusantara.vercel.app/api/v1/passage/Kej/1?version=tb |
 
-To learn more about Next.js, take a look at the following resources:
+#### Example Response
+```base
+{
+      "book_id": "1",
+      "book_name": "Kejadian",
+      "book_title": "Kejadian 1:1-31",
+      "verses": [
+            {
+              "verse": "1",
+              "text": "Pada mulanya Allah menciptakan langit dan bumi.",
+              "title": "Allah menciptakan langit dan bumi serta isinya"
+            },
+            {
+              "verse": "2",
+              "text": "Bumi belum berbentuk dan kosong; gelap gulita menutupi samudera raya, dan Roh Allah melayang-layang di atas permukaan air."
+            }
+      ]
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Setup Installation
+```bash
+$ https://github.com/yubliwarokkaid/api-alkitab-nusantara.git
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Install dependencies
+```bash
+npm install
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+### Running Development
+```bash
+npm run dev
+```
