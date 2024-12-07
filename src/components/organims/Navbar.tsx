@@ -1,5 +1,12 @@
+import { Roboto_Serif } from "next/font/google";
 import Link from "next/link";
 import { BiSolidFileJson } from "react-icons/bi";
+
+const roboto = Roboto_Serif({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function Navbar() {
   return (
@@ -9,7 +16,7 @@ export default function Navbar() {
           <BiSolidFileJson className="mr-2" />
           {`{Alkitab Nusanatar API}`}
         </h1>
-        <nav className="space-x-6">
+        <nav className={`space-x-6 ${roboto.className}`}>
           <Link href="#endpoints" className="text-white hover:underline">
             Demo
           </Link>

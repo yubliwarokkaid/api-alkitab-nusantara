@@ -1,4 +1,11 @@
+import { Roboto_Serif } from "next/font/google";
 import Link from "next/link";
+
+const roboto = Roboto_Serif({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function TablePassage() {
   return (
@@ -30,7 +37,9 @@ export default function TablePassage() {
               {`/api/v1/passage/{short}/{chapter}`}
             </Link>
           </td>
-          <td className="border border-slate-200 px-4 py-2 font-serif font-medium">
+          <td
+            className={`border border-slate-200 px-4 py-2 ${roboto.className} font-medium`}
+          >
             Pada Enpoint ini mengambil semua Nama Buku, Title Buku, isi Ayat dan
             Nomor Pasal.
             <ul className="ml-4 list-disc">
@@ -59,7 +68,9 @@ export default function TablePassage() {
               {`/api/v1/passage/{short}/{chapter}?version={version}`}
             </Link>
           </td>
-          <td className="border border-slate-200 px-4 py-2 font-serif font-medium">
+          <td
+            className={`border border-slate-200 px-4 py-2 ${roboto.className} font-medium`}
+          >
             Pada Enpoint ini mengambil semua Nama Buku, Title Buku, isi Ayat dan
             Nomor Pasal, dengan menambahkan versi Terjemahan Alkitab seperti TB,
             TL, AV, dan lainnya.
@@ -67,10 +78,10 @@ export default function TablePassage() {
               <li>
                 contoh:
                 <Link
-                  href="https://api-alkitab-nusantara.vercel.app/api/v1/passage/Kej/1?version=tb"
+                  href="https://api-alkitab-nusantara.vercel.app/api/v1/passage/Kej/1?version=TB"
                   className="ml-1 text-sky-600 underline underline-offset-4 hover:text-sky-600"
                 >
-                  https://api-alkitab-nusantara.vercel.app/api/v1/passage/Kej/1?version=tb
+                  https://api-alkitab-nusantara.vercel.app/api/v1/passage/Kej/1?version=TB
                 </Link>
               </li>
             </ul>

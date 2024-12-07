@@ -1,4 +1,11 @@
+import { Roboto_Serif } from "next/font/google";
 import Link from "next/link";
+
+const roboto = Roboto_Serif({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function Footer() {
   const year = new Date().toLocaleDateString("id-ID", {
@@ -7,7 +14,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-800 py-4">
-      <div className="container mx-auto text-center font-poppins text-sm text-slate-200">
+      <div
+        className={`container mx-auto text-center ${roboto.className} text-xs font-medium text-slate-300`}
+      >
         &copy; {year} Design with&nbsp;
         <Link
           href="https://github.com/yubliwarokkaid/api-alkitab-nusantara"

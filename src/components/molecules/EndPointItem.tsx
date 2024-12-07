@@ -1,8 +1,15 @@
+import { Roboto_Serif } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
 import { GoCheck, GoCopy } from "react-icons/go";
 import TableBook from "../atoms/TableBook";
 import TablePassage from "../atoms/TablePassage";
+
+const roboto = Roboto_Serif({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function EndPointItem() {
   const jsonDataBook = [
@@ -47,11 +54,11 @@ export default function EndPointItem() {
 
   return (
     <div className="container mx-auto bg-white p-10">
-      <div className="font-poppins">
+      <div className={`${roboto.className}`}>
         <h2 className="mb-4 text-3xl font-semibold text-slate-700">
           Dokumentasi API
         </h2>
-        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm font-medium tracking-wide text-slate-600">
           REST API Alkitab Nusantara adalah sebuah layanan yang dirancang untuk
           memberikan akses cepat dan mudah ke teks Alkitab dalam berbagai versi
           terjemahan. Dengan API ini, pengembang dapat mengintegrasikan teks
@@ -61,7 +68,7 @@ export default function EndPointItem() {
           mempermudah pengolahan dan penyajian data Alkitab dalam aplikasi
           modern.
         </p>
-        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm font-medium tracking-wide text-slate-600">
           Sumber data REST API Alkitab Nusantara berasal dari
           <Link
             href="https://labs.sabda.org/API"
@@ -76,7 +83,7 @@ export default function EndPointItem() {
           berdasarkan buku, pasal, ayat, dan versi terjemahan, termasuk{" "}
           Terjemahan Baru (TB), King James Version (KJV), dan lainnya.
         </p>
-        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm font-medium tracking-wide text-slate-600">
           REST API Alkitab Nusantara juga sangat bermanfaat untuk pengembang
           aplikasi rohani, seperti pembaca Alkitab digital, renungan harian,
           atau alat studi teologi. API ini memungkinkan aplikasi untuk
@@ -86,7 +93,7 @@ export default function EndPointItem() {
           yang sangat membantu dalam mengembangkan solusi digital berbasis
           Alkitab.
         </p>
-        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm font-medium tracking-wide text-slate-600">
           Kesederhanaan dan fleksibilitas REST API Alkitab Nusantara
           menjadikannya pilihan ideal untuk berbagai kasus penggunaan. Dari
           aplikasi mobile hingga situs web gereja, API ini memberikan solusi
@@ -98,7 +105,7 @@ export default function EndPointItem() {
         </p>
       </div>
 
-      <div className="my-20 font-poppins">
+      <div className={`my-20 ${roboto.className}`}>
         <h2 className="mb-4 text-2xl font-semibold text-slate-700">
           1. Endpoint List Alkitab
         </h2>
@@ -147,7 +154,7 @@ export default function EndPointItem() {
           </div>
         </div>
       </div>
-      <div className="mt-10 font-poppins">
+      <div className={`mt-10 ${roboto.className}`}>
         <h2 className="mb-4 text-2xl font-semibold text-slate-700">
           2. Endpoint Isi Konten Alkitab
         </h2>

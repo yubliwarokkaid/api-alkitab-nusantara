@@ -1,4 +1,11 @@
+import { Roboto_Serif } from "next/font/google";
 import Link from "next/link";
+
+const roboto = Roboto_Serif({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function TableBook() {
   return (
@@ -30,7 +37,9 @@ export default function TableBook() {
               /api/v1/book/list
             </Link>
           </td>
-          <td className="border border-slate-200 px-4 py-2 font-serif font-medium">
+          <td
+            className={`border border-slate-200 px-4 py-2 ${roboto.className} font-medium`}
+          >
             Pada Enpoint ini mengambil semua isi Kitab dari (Kejadian - Wahyu)
           </td>
         </tr>
@@ -47,7 +56,9 @@ export default function TableBook() {
               /api/v1/book/list/old
             </Link>
           </td>
-          <td className="border border-slate-200 px-4 py-2 font-serif font-medium">
+          <td
+            className={`border border-slate-200 px-4 py-2 ${roboto.className} font-medium`}
+          >
             Pada Enpoint ini mengambil semua isi Kitab Perjanjian Lama dari
             (Kejadian - Maleakhi)
           </td>
@@ -65,7 +76,9 @@ export default function TableBook() {
               /api/v1/book/list/new
             </Link>
           </td>
-          <td className="border border-slate-200 px-4 py-2 font-serif font-medium">
+          <td
+            className={`border border-slate-200 px-4 py-2 ${roboto.className} font-medium`}
+          >
             Pada Enpoint ini mengambil semua isi Kitab Perjanjian Baru dari
             (Matius - Wahyu)
           </td>
