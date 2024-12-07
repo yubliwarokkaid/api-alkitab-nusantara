@@ -3,11 +3,12 @@
 REST API Alkitab Nusantara adalah sebuah layanan yang dirancang untuk memberikan akses cepat dan mudah ke teks Alkitab dalam berbagai versi terjemahan. Dengan API ini, pengembang dapat mengintegrasikan teks Alkitab ke dalam aplikasi atau situs web mereka, sehingga memungkinkan pengguna untuk membaca, mencari, atau menampilkan ayat dan pasal tertentu sesuai kebutuhan. API ini menggunakan format data JSON, yang mempermudah pengolahan dan penyajian data Alkitab dalam aplikasi modern.
 
 ```bash
-https://github.com/yubliwarokkaid/api-alkitab-nusantara.git
-# Install dependency
+$ https://github.com/yubliwarokkaid/api-alkitab-nusantara.git
+```
+
+Install dependencies
+```bash
 npm install
-# Run
-npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
