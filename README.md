@@ -55,20 +55,22 @@ Sumber data REST API Alkitab Nusantara berasal dari [SABDA Labs](https://labs.sa
 
 #### Example Response
 ```base
-[
-    {
-      "id": 1,
-      "short": "Kej",
-      "name": "Kejadian",
-      "chapter": 50
-    },
-    {
-      "id": 2,
-      "short": "Kel",
-      "name": "Keluaran",
-      "chapter": 40
-    }
-]
+{
+      "book_id": "1",
+      "book_name": "Kejadian",
+      "book_title": "Kejadian 1:1-31",
+      "verses": [
+            {
+              "verse": "1",
+              "text": "Pada mulanya Allah menciptakan langit dan bumi.",
+              "title": "Allah menciptakan langit dan bumi serta isinya"
+            },
+            {
+              "verse": "2",
+              "text": "Bumi belum berbentuk dan kosong; gelap gulita menutupi samudera raya, dan Roh Allah melayang-layang di atas permukaan air."
+            }
+      ]
+}
 ```
 
 ### Setup Installation
