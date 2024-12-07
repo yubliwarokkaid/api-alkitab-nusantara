@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TableBook() {
   return (
-    <table className="mb-10 w-full table-fixed border border-slate-200 text-sm text-gray-100">
+    <table className="mb-10 min-w-full table-auto border border-slate-200 text-sm text-gray-100">
       <thead className="bg-slate-100 font-serif text-slate-700">
         <tr>
           <th className="border border-slate-200 px-4 py-2 text-left">

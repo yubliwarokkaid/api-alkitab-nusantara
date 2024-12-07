@@ -11,11 +11,15 @@ export default function Navbar() {
         </h1>
         <nav className="space-x-6">
           <Link href="#endpoints" className="text-white hover:underline">
-            Documentation
+            Demo
           </Link>
-          <a href="#examples" className="text-white hover:underline">
-            Examples
-          </a>
+          <Link
+            href="https://github.com/yubliwarokkaid/api-alkitab-nusantara"
+            className="text-white hover:underline"
+            target="_blank"
+          >
+            Github
+          </Link>
         </nav>
       </div>
     </header>

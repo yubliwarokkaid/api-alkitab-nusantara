@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineCopy } from "react-icons/ai";
-import { BsCheckLg } from "react-icons/bs";
 import { GoCheck, GoCopy } from "react-icons/go";
 import TableBook from "../atoms/TableBook";
 import TablePassage from "../atoms/TablePassage";
@@ -50,10 +48,10 @@ export default function EndPointItem() {
   return (
     <div className="container mx-auto bg-white p-10">
       <div className="font-poppins">
-        <h2 className="mb-4 text-2xl font-semibold text-slate-700">
+        <h2 className="mb-4 text-3xl font-semibold text-slate-700">
           Dokumentasi API
         </h2>
-        <p className="mb-6 text-justify tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
           REST API Alkitab Nusantara adalah sebuah layanan yang dirancang untuk
           memberikan akses cepat dan mudah ke teks Alkitab dalam berbagai versi
           terjemahan. Dengan API ini, pengembang dapat mengintegrasikan teks
@@ -63,7 +61,7 @@ export default function EndPointItem() {
           mempermudah pengolahan dan penyajian data Alkitab dalam aplikasi
           modern.
         </p>
-        <p className="mb-6 text-justify tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
           Sumber data REST API Alkitab Nusantara berasal dari
           <Link
             href="https://labs.sabda.org/API"
@@ -78,7 +76,7 @@ export default function EndPointItem() {
           berdasarkan buku, pasal, ayat, dan versi terjemahan, termasuk{" "}
           Terjemahan Baru (TB), King James Version (KJV), dan lainnya.
         </p>
-        <p className="mb-6 text-justify tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
           REST API Alkitab Nusantara juga sangat bermanfaat untuk pengembang
           aplikasi rohani, seperti pembaca Alkitab digital, renungan harian,
           atau alat studi teologi. API ini memungkinkan aplikasi untuk
@@ -88,7 +86,7 @@ export default function EndPointItem() {
           yang sangat membantu dalam mengembangkan solusi digital berbasis
           Alkitab.
         </p>
-        <p className="mb-6 text-justify tracking-wide text-slate-600">
+        <p className="mb-6 text-justify text-sm tracking-wide text-slate-600">
           Kesederhanaan dan fleksibilitas REST API Alkitab Nusantara
           menjadikannya pilihan ideal untuk berbagai kasus penggunaan. Dari
           aplikasi mobile hingga situs web gereja, API ini memberikan solusi
