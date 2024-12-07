@@ -7,7 +7,7 @@ Sumber data REST API Alkitab Nusantara berasal dari [SABDA Labs](https://labs.sa
 ### Base URL
 [https://api-alkitab-nusantara.vercel.app](https://api-alkitab-nusantara.vercel.app)
 
-## API Endpoints
+### API Endpoints
 
 | METHOD | ENDPOINT                   | DESCRIPTION                                                                 |
 |--------|----------------------------|-----------------------------------------------------------------------------|
