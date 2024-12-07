@@ -20,18 +20,18 @@ Sumber data REST API Alkitab Nusantara berasal dari [SABDA Labs](https://labs.sa
 #### Example Response
 ```base
 [
-  {
-    "id": 1,
-    "short": "Kej",
-    "name": "Kejadian",
-    "chapter": 50
-  },
-  {
-    "id": 2,
-    "short": "Kel",
-    "name": "Keluaran",
-    "chapter": 40
-  }
+    {
+      "id": 1,
+      "short": "Kej",
+      "name": "Kejadian",
+      "chapter": 50
+    },
+    {
+      "id": 2,
+      "short": "Kel",
+      "name": "Keluaran",
+      "chapter": 40
+    }
 ]
 ```
 
