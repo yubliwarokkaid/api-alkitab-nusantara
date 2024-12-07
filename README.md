@@ -17,6 +17,24 @@ Sumber data REST API Alkitab Nusantara berasal dari [SABDA Labs](https://labs.sa
 | GET    | `/api/v1/book/list/old`     | Pada Endpoint ini mengambil semua isi Kitab Perjanjian Lama dari (Kejadian - Maleakhi). |
 | GET    | `/api/v1/book/list/new`     | Pada Endpoint ini mengambil semua isi Kitab Perjanjian Baru dari (Matius - Wahyu). |
 
+#### Example Response
+```base
+[
+  {
+    "id": 1,
+    "short": "Kej",
+    "name": "Kejadian",
+    "chapter": 50
+  },
+  {
+    "id": 2,
+    "short": "Kel",
+    "name": "Keluaran",
+    "chapter": 40
+  }
+]
+```
+
 ### Setup Installation
 ```bash
 $ https://github.com/yubliwarokkaid/api-alkitab-nusantara.git
